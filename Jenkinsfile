@@ -1,5 +1,4 @@
-pipeline
-{
+pipeline{
 agent any 
 stages{
 stage ('source code')
@@ -13,9 +12,15 @@ stage('install')
 {
 steps{
 echo "install dependencies"
-sh 'npm install'
+sh npm install
 }
      }
+     stage ('TEST') {
+     steps{
+echo "Testing apllication"
+     sh 'npm run test'
+     }
+     }
+     
     }
 }
-
