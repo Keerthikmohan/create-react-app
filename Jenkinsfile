@@ -17,7 +17,7 @@ sh npm install
      }
      stage ('TEST') {
      steps{
-echo "Testing apllication!!"
+echo "Testing apllication!!!"
      sh 'npm run test'
      }
      }
