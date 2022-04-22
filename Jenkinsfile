@@ -12,15 +12,22 @@ stage('install')
 {
 steps{
 echo "install dependencies"
-sh 'npm install'
+sh npm install
 }
      }
      stage ('TEST') {
      steps{
-echo "Testing apllication!!"
+     echo "TESTING"
      sh 'npm run test'
      }
      }
-     
+     stage ('build'){
+     steps{
+     sh ''' 
+     echo "buiding application"
+     npm run start
+     '''
+     }
+     }
     }
 }
