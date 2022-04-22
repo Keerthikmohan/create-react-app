@@ -13,7 +13,7 @@ stage('install')
 {
 steps{
 echo "install dependencies"
-sh npm install
+sh 'npm install'
 }
      }
     }
